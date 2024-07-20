@@ -5,22 +5,30 @@
 }
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: darkgreen;
+    background-image: linear-gradient(darkgreen, yellowgreen);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 header {
-    padding: 15px;
+    padding: 10px;
     background-color: white;
 }
 .todolist-container {
     background-color: white;
     max-width: 600px;
-    height: 500px;
-    margin: 100px auto;
+    margin: 60px auto;
     border-radius: 20px;
 }
 .top-container, .bottom-container {
-    padding: 20px;
+    padding: 40px;
 }
 .top-container {
     border-bottom: 1px solid black;
+}
+ul li {
+    border-bottom: 1px solid black;
+    padding: 20px 0px;
+}
+ul li:last-child {
+    border-bottom: none;
 }
