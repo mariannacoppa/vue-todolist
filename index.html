@@ -36,6 +36,9 @@
                                                 {{ task.text }}
                                             </div>
                                             <div class="buttons">
+                                                <button class="btn btn-sm btn-warning mx-2" @click="deleteTask(index)">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
                                                 <button class="btn btn-sm btn-danger" @click="deleteTask(index)">
                                                     <i class="fas fa-times"></i>
                                                 </button>
@@ -47,7 +50,7 @@
                             <div class="bottom-container">
                                 <div class="d-flex">
                                         <input type="text" class="form-control" placeholder="Add task" 
-                                        v-model="text">
+                                        v-model="text" >
                                         <button class="btn btn-success ms-2" @click="addTask">Add</button>
                                 </div>
                             </div>
