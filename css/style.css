@@ -7,3 +7,20 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: darkgreen;
 }
+header {
+    padding: 15px;
+    background-color: white;
+}
+.todolist-container {
+    background-color: white;
+    max-width: 600px;
+    height: 500px;
+    margin: 100px auto;
+    border-radius: 20px;
+}
+.top-container, .bottom-container {
+    padding: 20px;
+}
+.top-container {
+    border-bottom: 1px solid black;
+}
