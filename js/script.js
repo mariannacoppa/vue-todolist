@@ -2,6 +2,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            text: null,
             tasks: [
                 {
                     text: 'fare la spesa',
@@ -28,9 +29,17 @@ createApp({
     },
     methods: {
         deleteTask(index) {
-            if (confirm('sicuro di voler eliminare il task?')) {
+            if (confirm('Sicuro di voler eliminare il task?')) {
                 this.tasks.splice(index, 1);
             }
+        },
+        addTask() {
+            let object = {
+                text: this.text,
+                done: false
+            }
+            this.tasks.push(object);
+            this.text = null;
         }
     }
 }).mount('#app');
