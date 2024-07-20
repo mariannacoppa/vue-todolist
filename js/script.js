@@ -28,7 +28,9 @@ createApp({
     },
     methods: {
         deleteTask(index) {
-            this.tasks.splice(index, 1);
+            if (confirm('sicuro di voler eliminare il task?')) {
+                this.tasks.splice(index, 1);
+            }
         }
     }
 }).mount('#app');
