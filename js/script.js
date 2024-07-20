@@ -6,23 +6,28 @@ createApp({
             tasks: [
                 {
                     text: 'fare la spesa',
-                    done: false
+                    done: false,
+                    edit: false
                 },
                 {
                     text: 'pulizie',
-                    done: true
+                    done: true,
+                    edit: false
                 },
                 {
                     text: 'nuotare',
-                    done: true
+                    done: true,
+                    edit: false
                 },
                 {
                     text: 'studiare',
-                    done: false
+                    done: false,
+                    edit: false
                 },
                 {
                     text: 'leggere',
-                    done: false
+                    done: false,
+                    edit: false
                 }
             ]
         }
@@ -32,6 +37,9 @@ createApp({
             if (confirm('Sicuro di voler eliminare il task?')) {
                 this.tasks.splice(index, 1);
             }
+        },
+        editTask(index) {
+            this.tasks[index].edit = !this.tasks[index].edit;
         },
         addTask() {
             if (this.text != '' && this.text != null) {
