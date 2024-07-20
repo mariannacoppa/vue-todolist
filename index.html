@@ -30,7 +30,7 @@
                                     Tasks
                                 </h2>
                                 <ul class="list-unstyled">
-                                    <li v-for="(task, index) in tasks">
+                                    <li v-for="(task, index) in tasks" @click="changeStatus(index)">
                                         <div class="d-flex justify-content-between">
                                             <div class="text" :class="task.done ? 'text-decoration-line-through' : ''">
                                                 {{ task.text }}

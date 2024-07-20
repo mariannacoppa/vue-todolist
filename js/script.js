@@ -45,6 +45,15 @@ createApp({
             else {
                 alert('Non hai digitato nessuna task da inserire');
             }
+        },
+        changeStatus(index) {
+            // if (this.tasks[index].done == true) {
+            //     this.tasks[index].done = false;
+            // }
+            // else [
+            //     this.tasks[index].done = true;
+            // ]
+            this.tasks[index].done = !this.tasks[index].done;
         }
     }
 }).mount('#app');
