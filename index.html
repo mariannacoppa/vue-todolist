@@ -30,10 +30,10 @@
                                     Tasks
                                 </h2>
                                 <ul class="list-unstyled">
-                                    <li>
+                                    <li v-for="(task, index) in tasks">
                                         <div class="d-flex justify-content-between">
                                             <div class="text">
-                                                lorem
+                                                {{ task.text }}
                                             </div>
                                             <div class="buttons">
                                                 <button class="btn btn-sm btn-danger">
