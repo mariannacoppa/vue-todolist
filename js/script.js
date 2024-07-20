@@ -40,6 +40,7 @@ createApp({
         },
         editTask(index) {
             this.tasks[index].edit = !this.tasks[index].edit;
+            console.log(this.tasks[index]);
         },
         addTask() {
             if (this.text != '' && this.text != null) {
