@@ -34,12 +34,17 @@ createApp({
             }
         },
         addTask() {
-            let object = {
-                text: this.text,
-                done: false
+            if (this.text != '' && this.text != null) {
+                let object = {
+                    text: this.text,
+                    done: false
+                }
+                this.tasks.push(object);
+                this.text = null;
             }
-            this.tasks.push(object);
-            this.text = null;
+            else {
+                alert('Non hai digitato nessuna task da inserire');
+            }
         }
     }
 }).mount('#app');
